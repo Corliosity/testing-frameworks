@@ -1,0 +1,66 @@
+.initials-circle {
+    background-color: #cccccc;
+    font-style: italic;
+    -webkit-border-radius: 44px;
+    -moz-border-radius: 44px;
+    -ms-border-radius: 44px;
+    -o-border-radius: 44px;
+    border-radius: 44px;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    // margin: 8px auto 20px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 44px;
+}
+
+ul {
+    margin : 0;
+    list-style: none;
+}
+
+.favourite-calls {
+    position: fixed;
+    right : 0;
+}
+
+.circle-float {
+    float: left;
+}
+
+.initials-circle {
+    cursor: pointer;
+}
+
+.contact-info {
+    float: left;
+    margin-left: 2.25rem;
+}
+
+span.icon.icon-star-empty {
+    position : relative;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.star-color.icon-star-empty:before {
+    content: "\e603";
+    font-size: 1.5rem;
+    color: 'yellow';
+}
+
+@media only screen and (max-width: 40em) {
+    .favourite-calls h4{
+        display: none;
+    }
+    .favourite-calls {
+        left : 54%;
+        bottom: 0;
+    }
+    .favourite-calls:before {
+        content: 'Favourite Callers';
+    }
+}

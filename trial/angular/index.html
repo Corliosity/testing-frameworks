@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='truecaller'>
+ <head>
+ 	<title>Truecaller Contact List</title>
+ 	<meta charset='UTF-8'>
+ 	<!-- Load all necessary Scripts -->
+ 	<script type='text/javascript' src='./_assets/js/lib/jquery/1.11.0/jquery.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/angular/1.4.5/angular.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/angular-route/1.4.5/angular-route.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/angular-resource/1.4.5/angular-resource.js'></script>
+ 	<!-- Creating a starting point for the application -->
+ 	<script>
+ 		var appConfig = {
+ 			startURL : 'http://www.truecaller.com/assignment/assignment.json'
+ 		};
+ 	</script>
+ 	<!-- Load applicaiton -->
+ 	<script type='text/javascript' src='./_assets/js/app.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/controller.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/services.js'></script>
+ </head>
+ <body>
+ 	<div id='container'>
+ 		<div class='header'>
+ 			<h1>Andrew Corliss Test</h1>
+ 			<p>Developed using Angular.js and LocalStorage</p>
+ 		</div>
+ 		<div ng-view class='view'>
+ 		</div>
+ 	</div>
+ </body>
+</html>

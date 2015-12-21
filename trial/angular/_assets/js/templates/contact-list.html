@@ -1,0 +1,15 @@
+<div class='contact'>
+	<h4>All Contacts</h4>
+	<div ng-repeat='contact in contacts | limitTo : 20'>
+		<span>{{ contact.initials }}</span>
+		<h4>{{ contact.name }}</h4>
+		<p>{{ contact.phone }}</p>
+		<p>{{ contact.email }}</p>
+	</div>
+</div>
+
+<div class='favourites'>
+	<h4>Favourite Contacts</h4>
+	<div ng-repeat='favourite in favourites'>
+	</div>
+</div>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+ 	<title>Truecaller Contact List</title>
+ 	<meta charset='UTF-8'>
+ 	<!-- Load CSS files -->
+ 	<link rel='stylesheet' href='./_assets/css/normalize.css' />
+ 	<link rel='stylesheet' href='./_assets/css/foundation/foundation.min.css' />
+ 	<link rel='stylesheet' href='./_assets/css/icomoon/style.css' />
+ 	<link rel='stylesheet' href='./_assets/css/main.css' />
+ 	<!-- Load all necessary Scripts -->
+ 	<script type='text/javascript' src='./_assets/js/lib/jquery/1.11.0/jquery.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/underscore/1.8.3/underscore.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/backbone/1.2.3/backbone.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/backbone/backbone-localstorage/backboneLocalStorage.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/lib/backbone/backbone.marionette/2.4.3/backbone.marionette.js'></script>
+ 	<!-- Creating a starting point for the application -->
+ 	<script>
+ 		var appConfig = {
+ 			startURL : 'http://www.truecaller.com/assignment/assignment.json',
+ 			storageKey : 'TruecallerFavourites'
+ 		};
+ 	</script>
+ </head>
+ <body>
+ 	<div id='container column'>
+ 		<div class='header row'>
+ 			<h1>Andrew Corliss Test</h1>
+ 			<p>Developed using Backbone.js and LocalStorage</p>
+ 		</div>
+ 		<div id='mainRegion'>
+
+ 		</div>
+ 	</div>
+
+ 	<script type='text/template' id='main_view'>
+ 		 	
+		 		<div class='medium-6 columns'>
+		 			<h4>All Contacts</h4>
+	 		 	<div id='allContacts'>
+	 		 		
+	 			</div>
+	 		</div>
+			
+ 			<div class='medium-6 columns favourite-calls'>
+ 				<h4 class='hide-for-small'>Your Farvourites</h4>
+	 			<div id='favouritesRegion'>
+	 				
+	 			</div>
+ 			</div>
+
+ 	</script>
+ 	<!-- Note this is an item view in a collection view -->
+ 	<script type='text/template' id='contacts_list'>
+ 			
+ 			<span class='initials-circle circle-float'><%- initials %></span>
+ 			<div class='contact-info'>
+	 			<h3><%- name %></h3>
+	 			<p><%- phone %></p>
+	 			<p><%- email %></p>
+	 			<button class='flat'>Click to view</button>
+ 			</div>
+ 			<span class='icon icon-star-empty js-save'></span>
+
+
+ 	</script>
+
+ 	<script type='text/template' id='contact-detail-view'>
+ 			
+ 			<a href='#'>Back to Contacts</a>
+	 	 	
+	 	 	<span class='initials-circle circle-float'><%- initials %></span>
+
+ 			<div class='medium-6 columns'>
+	 			<h6><%- name %></h6>
+	 			<p><%- phone %></p>
+	 			<p><%- email %></p>
+	 			<p><%- address.street %></p>
+	 			<p><%- address.city %></p>
+	 			<p><%- address.country %></p>
+	 			<span class='icon icon-star-empty js-save'></span>
+ 			</div>
+
+ 	</script>
+
+ 	<script type='text/template' id='favourites-view'>
+
+ 	 	 <span class='initials-circle circle-float js-initials'><%- initials %></span>
+ 	
+ 	</script>
+
+ 	<script type='text/javascript' src='./_assets/js/app-config.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/models/favourite.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/collections/favourites.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/models/contact.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/collections/contacts.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/views/mainView.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/views/contactChildView.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/views/contactsViewCollection.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/views/favouriteChildView.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/views/favouriteViewCollection.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/views/contactDetails.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/controller.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/router.js'></script>
+ 	<script type='text/javascript' src='./_assets/js/app.js'></script>
+ </body>
+</html>
